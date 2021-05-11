@@ -1,0 +1,36 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+
+{% include 'accounts/status.html' %}
+
+<br>
+
+<br>
+
+<div class="row">
+    <div class="col-md-12">
+        <h5>PRODUCTS</h5>
+        <hr>
+        <div class="card card-body">
+            <a class="btn btn-primary btn-sm btn-block">Manage Products</a>
+            <table class="table table-sm">
+        <tr>
+            <td colspan="3">Products</td>
+        </tr>
+        <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Price</th>
+        </tr>
+         {% for i in products %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.category}}</td>
+                <td>{{i.price}}</td>
+                
+            </tr>
+           
+         {% endfor %}
+    </table>
+    {% endblock %}
